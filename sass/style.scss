@@ -1,0 +1,36 @@
+@import "mixin";
+.text,textarea,h1 {
+    color:red; 
+    font-size: 20px;
+    @if background-color != white {
+        color:white
+    }
+}
+.btn{
+@include inline-block();
+}
+@function background($color){
+    @if($color == white){
+        @return black;
+    } @else {
+        @return white;
+    }
+}
+h1{
+    color: background(white);
+}
+
+$languages: "react","Spring","SOA";
+@function first($list){
+ @return nth($list,1);
+}
+.text {
+ content: first($languages)
+}
+
+@function last($list){
+ @return nth($list,-1);
+}
+.text2 {
+    content: last($languages);
+}

@@ -1,0 +1,3 @@
+@mixin inline-block($p1:3px,$p2:solid,$p3:yellow){
+    border: $p1 $p2 $p3
+}
